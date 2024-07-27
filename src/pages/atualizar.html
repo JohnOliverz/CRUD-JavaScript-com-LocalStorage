@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Atualizar Usuário</title>
+</head>
+<body>
+
+    <div class="div-cadastro">
+        <h2>Atualizar Usuário</h2>
+        <div class="form">
+            <form class="formUsuario" id="formAtualizarUsuario">
+                <input type="hidden" id="index" />
+                <input type="text" id="nome" placeholder="Nome" required/>
+                <input type="email" id="email" placeholder="Email" required/>
+                <input type="text" id="telefone" placeholder="Telefone" required/>
+                <input type="date" id="dataNascimento" placeholder="Data Nascimento" required />
+                <button type="submit">ATUALIZAR</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../js/Controlador.js"></script>
+</body>
+</html>
