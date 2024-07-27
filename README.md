@@ -1,5 +1,5 @@
 
-# Avaliação Sprint 1 - Programa de Bolsas Compass UOL / AWS - turma julho-a/2024
+# CRUD - Sistema de Cadastro (JavaScript with LocalStorage)
 
 ## Descrição
 
@@ -23,7 +23,6 @@ Esta é uma aplicação JavaScript que implementa operações CRUD (Create, Read
 
 ## 3. Estrutura do Projeto
 
-![Estrutura do codigo](https://github.com/user-attachments/assets/7b3475c7-6fa7-4506-8ee1-fb44656457e2)
 
 A estrutura do projeto está organizada da seguinte forma:
 
@@ -42,7 +41,6 @@ A estrutura do projeto está organizada da seguinte forma:
     - `atualizar.html`: Página que permite a atualização dos dados de um usuário existente.
 
 
-
 ## 4. Como Usar ?
 
  **Clone o Repositório e abra o arquivo index.html no seu navegador de preferência**
@@ -51,27 +49,17 @@ A estrutura do projeto está organizada da seguinte forma:
    - Preencha o formulário de cadastro com o nome, e-mail, telefone e data de nascimento.
    - Clique no botão "Cadastrar" para adicionar o usuário à lista.
 
-![cap 1](https://github.com/user-attachments/assets/f8852f2f-6643-41b2-825d-b92cd33ddd43)
-
 2. **Listagem de Usuários:**
    - Os usuários cadastrados são exibidos em uma tabela na página principal.
-
-![cap 2](https://github.com/user-attachments/assets/934963e2-f95e-4449-ba4a-79b26ad1e779)
 
 3. **Edição de Usuários:**
    - Clique no botão "Editar" ao lado do usuário que deseja editar.
    - Você será redirecionado para uma página de atualização onde os dados do usuário serão carregados automaticamente no formulário.
    - Faça as alterações necessárias e clique no botão "Atualizar" para salvar as mudanças.
 
-![cap3](https://github.com/user-attachments/assets/260ad4c6-65f3-437c-affe-1d875e2df780)
-![cap4](https://github.com/user-attachments/assets/0c618df3-12d2-4ef3-9d82-378b4330ab5f)
-
 4. **Exclusão de Usuários:**
    - Clique no botão "Deletar" ao lado do usuário que deseja excluir.
    - Uma confirmação será exibida. Confirme a exclusão para remover o usuário da lista.
-
-![cap5](https://github.com/user-attachments/assets/b5b7ee40-6bba-45b2-bf26-add8df3f59e7)
-
 
 ## 5. Dificuldades no desenvolvimento
 
