@@ -1,76 +1,6 @@
+// Controlador.js
+import { adicionarUsuario, deletarUsuario, editarUsuario, atualizarUsuario, renderizarTabelaUsuarios, obterUsuarios } from './OperacoesUsuario.js';
 import FabricaUsuario from './FabricaUsuario.js';
-
-
-//============================[Parte das funções de Operação]==================================
-
-// Função para obter usuários do Local Storage
-function obterUsuarios() {
-    return JSON.parse(localStorage.getItem('usuarios')) || [];
-}
-
-// Função para salvar usuários no Local Storage
-function salvarUsuarios(usuarios) {
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-}
-
-// Função para adicionar um novo usuário
-function adicionarUsuario(usuario) {
-    const usuarios = obterUsuarios();
-    usuarios.push(usuario);
-    salvarUsuarios(usuarios);
-    renderizarTabelaUsuarios();
-    alert('Usuário cadastrado com sucesso!');
-}
-
-// Função para deletar um usuário
-window.deletarUsuario = function(index) {
-    const confirmacao = confirm("Você realmente deseja deletar este item?");
-    if (confirmacao) {
-        let usuarios = obterUsuarios();
-        usuarios.splice(index, 1);
-        salvarUsuarios(usuarios);
-        renderizarTabelaUsuarios();
-        alert('Usuário deletado com sucesso!'); 
-    }
-}
-
-// Função para editar um usuário
-window.editarUsuario = function(index) {
-    window.location.href = `atualizar.html?index=${index}`;
-}
-
-// Função para atualizar um usuário
-function atualizarUsuario(index, usuarioAtualizado) {
-    let usuarios = obterUsuarios();
-    usuarios[index] = usuarioAtualizado;
-    salvarUsuarios(usuarios);
-    alert('Usuário atualizado com sucesso!');
-    window.location.href = 'index.html'; 
-}
-
-// Função para renderizar a tabela de usuários
-function renderizarTabelaUsuarios() {
-    const corpoTabelaUsuarios = document.querySelector('#tabelaUsuarios tbody');
-    corpoTabelaUsuarios.innerHTML = '';
-    const usuarios = obterUsuarios();
-
-    usuarios.forEach((usuario, index) => {
-        const linha = document.createElement('tr');
-        linha.innerHTML = `
-            <td>${usuario.nome}</td>
-            <td>${usuario.email}</td>
-            <td>${usuario.telefone}</td>
-            <td>${usuario.dataNascimento}</td>
-            <td>
-                <button onclick="editarUsuario(${index})">Editar</button>
-                <button onclick="deletarUsuario(${index})">Deletar</button>
-            </td>
-        `;
-        corpoTabelaUsuarios.appendChild(linha);
-    });
-}
-
-//==============================[Manipulação dos Formularios]==================================
 
 // Manipulação do formulário de cadastro
 const formUsuario = document.getElementById('formUsuario');
@@ -134,3 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         renderizarTabelaUsuarios();
     }
 });
+
+// Tornar as funções globais para uso nos botões
+window.editarUsuario = editarUsuario;
+window.deletarUsuario = deletarUsuario;
